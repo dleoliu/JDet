@@ -42,3 +42,12 @@ temp*
 configs/fair
 tools/convert_dataset.py
 tools/merge_results2.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/

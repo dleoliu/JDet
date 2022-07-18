@@ -39,11 +39,10 @@ dataset = dict(
                 mean =  [123.675, 116.28, 103.53],
                 std = [58.395, 57.12, 57.375],
                 to_bgr=False,)
-            
         ],
         batch_size=2, 
         num_workers=4,
-        shuffle= True
+        shuffle=True
     ),
     test = dict(
         type= "ImageDataset",
@@ -63,3 +62,5 @@ dataset = dict(
         num_workers= 4,
         batch_size= 1)
 )
+
+max_epoch = 6

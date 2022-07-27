@@ -12,14 +12,17 @@ dataset = dict(
                 max_size=1024
             ),
             dict(
+                type = "Pad",
+                size_divisor=32),
+            dict(
                 type = "Normalize",
                 mean =  [123.675, 116.28, 103.53],
                 std = [58.395, 57.12, 57.375],
                 to_bgr=False,)
         ],
         batch_size=2,
-        num_workers=4,
-        shuffle=False
+        num_workers=18,
+        shuffle=True
     ),
     train=dict(
         type="FAIRDataset",
@@ -31,9 +34,11 @@ dataset = dict(
                 max_size=1024
             ),
             dict(
-                type='RotatedRandomFlip', 
-                prob=0.5,
-                direction='horizontal'),
+                type='RotatedRandomFlip',
+                prob=0.5),
+            dict(
+                type = "Pad",
+                size_divisor=32),
             dict(
                 type = "Normalize",
                 mean =  [123.675, 116.28, 103.53],
@@ -41,7 +46,7 @@ dataset = dict(
                 to_bgr=False,)
         ],
         batch_size=2, 
-        num_workers=4,
+        num_workers=18,
         shuffle=True
     ),
     test = dict(
@@ -54,12 +59,15 @@ dataset = dict(
             min_size= 1024,
             max_size= 1024),
         dict(
+                type = "Pad",
+                size_divisor=32),
+        dict(
             type= "Normalize",
             mean=  [123.675, 116.28, 103.53],
             std= [58.395, 57.12, 57.375],
             to_bgr= False)
         ],
-        num_workers= 4,
+        num_workers= 18,
         batch_size= 1)
 )
 

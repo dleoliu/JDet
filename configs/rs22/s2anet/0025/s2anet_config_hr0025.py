@@ -22,4 +22,4 @@ optimizer = dict(
     lr=0.0025,
 )
 
-max_epoch = 6
+max_epoch = 12

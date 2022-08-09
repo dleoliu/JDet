@@ -27,4 +27,4 @@ dataset = dict(
     ),
 )
 
-max_epoch = 6
+max_epoch = 12

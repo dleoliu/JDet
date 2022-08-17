@@ -27,4 +27,8 @@ dataset = dict(
     ),
 )
 
+optimizer = dict(
+    lr=0.004,
+)
+
 max_epoch = 12
